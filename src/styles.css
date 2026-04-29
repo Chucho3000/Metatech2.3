@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-neon: #39FF14;
+  --color-brand-light: #66FF66;
+  --color-brand-mint: #2DFFB3;
+  --color-brand-blue: #00BFFF;
+  --color-brand-deep: #007BBF;
+  --color-brand-purple: #6A1B9A;
+  --font-sans: 'Exo 2', sans-serif;
+}
+
+body {
+  @apply m-0 bg-white;
+  font-family: 'Exo 2', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
