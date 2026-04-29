@@ -4,11 +4,9 @@ import { RouterProvider, createRouter, createHashHistory } from '@tanstack/react
 import { routeTree } from './routeTree.gen'
 import './styles.css'
 
-const hashHistory = createHashHistory()
-
 const router = createRouter({
   routeTree,
-  history: hashHistory,
+  history: createHashHistory(),
   scrollRestoration: true,
 })
 
