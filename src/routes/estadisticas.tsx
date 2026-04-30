@@ -1,12 +1,7 @@
-import { createRoute } from '@tanstack/react-router'
-import { useState, useEffect } from 'react'
+import { createRoute, Link } from '@tanstack/react-router'
+import { Recycle, DollarSign, ArrowLeft } from 'lucide-react'
+import { useStore } from '../StoreContext'
 import { Route as rootRoute } from './__root'
-
-export const Route = createRoute({
-  getParentRoute: () => rootRoute,
-  path: '/estadisticas',
-  component: Estadisticas,
-})
 
 function Estadisticas() {
   const { totalRecycled, totalEarned } = useStore()
@@ -30,7 +25,6 @@ function Estadisticas() {
             <p className="text-5xl font-bold text-gray-800">{totalRecycled.toFixed(2)} <span className="text-2xl text-gray-400 font-medium">kg</span></p>
           </div>
         </div>
-
         <div className="bg-white rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100 flex flex-col items-center justify-center gap-6 relative overflow-hidden group hover:border-brand-purple/30 transition-colors">
           <div className="absolute -right-4 -bottom-4 w-32 h-32 bg-brand-purple/5 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
           <div className="bg-gradient-to-br from-brand-purple to-purple-400 p-6 rounded-3xl shadow-inner relative z-10">
@@ -48,3 +42,9 @@ function Estadisticas() {
     </div>
   )
 }
+
+export const Route = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/estadisticas',
+  component: Estadisticas,
+})
