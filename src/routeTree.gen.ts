@@ -5,8 +5,8 @@ import { Route as EstadisticasRoute } from './routes/estadisticas'
 import { Route as MapaRoute } from './routes/mapa'
 
 export const routeTree = rootRoute.addChildren([
-  IndexRoute.update({ path: '/' }),
-  ConexionRoute.update({ path: '/conexion' }),
-  EstadisticasRoute.update({ path: '/estadisticas' }),
-  MapaRoute.update({ path: '/mapa' }),
+  IndexRoute,
+  ConexionRoute,
+  EstadisticasRoute,
+  MapaRoute,
 ])
