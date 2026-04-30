@@ -1,8 +1,9 @@
-import { createFileRoute, Link } from '@tanstack/react-router'
-import { Recycle, DollarSign, ArrowLeft } from 'lucide-react'
-import { useStore } from '../StoreContext'
+import { createRoute } from '@tanstack/react-router'
+import { Route as rootRoute } from './__root'
 
-export const Route = createFileRoute('/estadisticas')({
+export const Route = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/estadisticas',
   component: Estadisticas,
 })
 
