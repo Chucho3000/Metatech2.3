@@ -1,8 +1,9 @@
-import { createFileRoute, Link } from '@tanstack/react-router'
-import { Bluetooth, MapPin, ArrowRight, Activity } from 'lucide-react'
-import { useState, useEffect } from 'react'
+import { createRoute } from '@tanstack/react-router'
+import { Route as rootRoute } from './__root'
 
-export const Route = createFileRoute('/')({
+export const Route = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/',
   component: Dashboard,
 })
 
