@@ -1,12 +1,7 @@
-import { createRoute } from '@tanstack/react-router'
+import { createRoute, Link } from '@tanstack/react-router'
 import { useState, useEffect } from 'react'
+import { MapPin, ArrowLeft } from 'lucide-react'
 import { Route as rootRoute } from './__root'
-
-export const Route = createRoute({
-  getParentRoute: () => rootRoute,
-  path: '/mapa',
-  component: Mapa,
-})
 
 function Mapa() {
   const [mounted, setMounted] = useState(false)
@@ -30,7 +25,6 @@ function Mapa() {
             </div>
           </div>
         </div>
-        
         <div className="flex-1 w-full bg-gray-100 relative">
           {mounted ? (
             <iframe 
@@ -57,3 +51,9 @@ function Mapa() {
     </div>
   )
 }
+
+export const Route = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/mapa',
+  component: Mapa,
+})
