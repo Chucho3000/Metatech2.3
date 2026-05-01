@@ -4,8 +4,7 @@ import { useStore } from '../StoreContext'
 import { Route as rootRoute } from './__root'
 
 function Estadisticas() {
-const [totalRecycled, setTotalRecycled] = useState(0)
-const [totalEarned, setTotalEarned] = useState(0)
+  const { totalRecycled, totalEarned } = useStore()
 
   return (
     <div className="max-w-4xl mx-auto space-y-8">
