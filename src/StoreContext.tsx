@@ -9,8 +9,8 @@ interface StoreState {
 const StoreContext = createContext<StoreState | undefined>(undefined)
 
 export function StoreProvider({ children }: { children: React.ReactNode }) {
-  const [totalRecycled, setTotalRecycled] = useState(12.5) // Example starting data
-  const [totalEarned, setTotalEarned] = useState(12.5 * 18)
+const [totalRecycled, setTotalRecycled] = useState(0)
+const [totalEarned, setTotalEarned] = useState(0)
 
   // Load from localStorage if available
   useEffect(() => {
